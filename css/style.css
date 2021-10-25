@@ -1,0 +1,146 @@
+/**** colors ***/
+:root{
+    --veryDarkBlue : hsl(233, 47%, 7%);
+    --darkDesaturatedBlue : hsl(244, 38%, 16%);
+    --softViolet: hsl(277, 64%, 61%);
+    --White : hsl(0, 0%, 100%);
+    --slightlyTransparentWhite : hsla(0, 0%, 100%, 0.75);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    background-color: var(--veryDarkBlue);
+    color: var(--slightlyTransparentWhite);
+    height: 100vh;
+    
+}
+
+
+/***** How to use colors 
+(main background) : --veryDarkBlue
+(card background) : --darkDesaturatedBlue
+ (accent):  --softViolet
+
+
+ (main heading, stats):--White ;
+
+ (main paragraph):  --slightlyTransparentWhite ;
+
+ (stat headings): --slightlyTransparentWhite 
+**/
+
+/**
+- Font size: 15px
+
+  1. font-family
+  font-family: 'Inter', sans-serif
+
+  2. font-family
+ font-family: 'Lexend Deca', sans-serif;
+**/
+.card{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+    height:100vh;
+    
+   
+}
+.card .card__content{
+    background-color: var(--darkDesaturatedBlue);
+    max-width: 70%;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.image{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.image:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #aa5cdb8c;
+}
+
+img{
+    width: 100%;
+}
+.text{
+    padding: 40px 28px 40px 28px;
+}
+
+.text h1{
+    margin-bottom: 16px;
+    width: 85%;
+    color:var(--White);
+}
+
+h1 span{
+    color:var(--softViolet);
+}
+
+p{
+    width: 90%;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.numbers{
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+}
+
+.numbers span{
+    display: block;
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--White);
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 8px;
+}
+
+@media (max-width:768px){
+    body{
+        height: initial;
+    }
+    .card{
+       
+        width: 90%;
+        margin: 5rem auto;
+       height: initial;
+    }
+    .card .card__content{
+        flex-direction: column;
+    }
+    .image{
+        order: 1;
+    }
+
+    .text{
+        order: 2;
+        align-items: center;
+        text-align: center;
+        padding-left: 47px;
+    }
+    .numbers{
+     flex-direction: column;
+    }
+    .numbers div{
+        margin-bottom: 20px;
+    }
+}
