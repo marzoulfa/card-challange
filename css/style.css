@@ -126,6 +126,7 @@ p{
     }
     .card .card__content{
         flex-direction: column;
+        max-width: 100%;
     }
     .image{
         order: 1;
@@ -136,6 +137,9 @@ p{
         align-items: center;
         text-align: center;
         padding-left: 47px;
+    }
+    .text h1{
+        font-size: 1.5rem;
     }
     .numbers{
      flex-direction: column;
